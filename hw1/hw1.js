@@ -153,7 +153,7 @@ const Product = class Product {
         {
             array.push (new Product(`${products[key].name},${products[key].price/2},${products[key].availability}`));
 
-        }
+        }   
             
 
         return array;
