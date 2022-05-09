@@ -1,7 +1,7 @@
 
 import React, {useState} from "react";
 
-export default function CreateTodo({ user, setTodo, todos }) {
+export default function CreateTodo({ user, dispatch,todos }) {
   const [ title, setTitle ] = useState("")
   const [ description, setDescription ] = useState("")
   const[time,setTimeCreated] = useState("")
@@ -10,8 +10,10 @@ export default function CreateTodo({ user, setTodo, todos }) {
   function handleDescription (evt) { setDescription(evt.target.value) }
   function handleCreate (evt) {
     const dateCreated = new Date().toLocaleString(); 
-    const newTodo = { title, description,dateCreated}
-     setTodo([newTodo, ...todos])
+    dispatch({type:"CREATE_TODO",title,description,dateCreated})
+
+    //const newTodo = { title, description,dateCreated}
+     //setTodo([newTodo, ...todos])
   }
 
   return (
