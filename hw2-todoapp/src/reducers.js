@@ -22,14 +22,22 @@ function todoReducer(state,action)
                 title: action.title,
                 description: action.description,
                 dateCreated: action.dateCreated,
+                dateCompleted:action.dateCompleted,
+                id:action.id
             };
             return [newTodo, ...state];
+
+        case "DELETE_TODO":
+            return state.filter(todo => todo.id != action.id)
+
+        case "FETCH_TODOS":
+            return action.todos
+
 
             default:
                 return state;
 
-        case "TOGGLE_TODO":
-
+        
     }
 }
 

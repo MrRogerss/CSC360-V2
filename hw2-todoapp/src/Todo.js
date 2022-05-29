@@ -1,16 +1,16 @@
 
 import React,{useState} from "react";
 
-export default function Todo({ title, description,dateCreated}) {
+export default function Todo({ title, description,dateCreated,dateCompleted,id,deleteTodo},dispatch) {
     const[checked, setChecked] = React.useState(false);
-    const[date,setDate] = React.useState(false);
+    var[date,setDate] = React.useState(false);
 
     const handleChange = () =>{
 
         setChecked(!checked);
-        if(checked ==false)
+        if(checked == false)
         {
-            setDate(new Date().toLocaleString()); 
+          setDate(new Date().toLocaleString());
         }
         else
         {
@@ -37,6 +37,7 @@ export default function Todo({ title, description,dateCreated}) {
           />
 
           </label>
+          <input type = "button" value = "Delete this Todo" onClick ={() => deleteTodo(id)}/>
 
       </div>
 

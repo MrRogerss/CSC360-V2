@@ -1,0 +1,33 @@
+{
+  "todos": [
+    {
+      "title": "df",
+      "description": "",
+      "dateCreated": "5/23/2022, 10:21:45 PM",
+      "dateCompleted": "",
+      "id": 414106
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "testuser",
+      "password": "badpassword"
+    },
+    {
+      "username": "Nate",
+      "password": "hi",
+      "id": 2
+    },
+    {
+      "username": "f",
+      "password": "ff",
+      "id": 3
+    },
+    {
+      "username": "f",
+      "password": "f",
+      "id": 4
+    }
+  ]
+}
